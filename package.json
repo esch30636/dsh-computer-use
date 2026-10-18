@@ -1,0 +1,68 @@
+{
+  "name": "dsh-computer-use",
+  "version": "1.1.0",
+  "description": "Codex-style Windows computer use for DeepSeek Harness: window-targeted UI Automation, occlusion-tolerant screenshots, SendInput mouse/keyboard injection, a click-through liquid-glass screen overlay, and an ESC kill switch.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "helper",
+    "skills",
+    "docs",
+    "scripts",
+    "cordis.patch.yml",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "os": [
+    "win32"
+  ],
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "computer-use",
+    "desktop-control",
+    "windows",
+    "automation",
+    "ui-automation",
+    "screenshot",
+    "sendinput",
+    "ai-agent"
+  ],
+  "author": {
+    "name": "Escherichia",
+    "url": "https://github.com/esch30636"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esch30636/dsh-computer-use.git"
+  },
+  "homepage": "https://github.com/esch30636/dsh-computer-use#readme",
+  "bugs": {
+    "url": "https://github.com/esch30636/dsh-computer-use/issues"
+  },
+  "scripts": {
+    "pack:release": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/package.ps1"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-commands",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-session"
+      ]
+    }
+  }
+}

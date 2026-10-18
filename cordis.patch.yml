@@ -1,0 +1,7 @@
+# dsh-computer-use bundle patch: inserts the host plugin row into the profile's
+# plugin roster. The plugin registers the model-facing computer_* tools and
+# spawns the bundled Windows PowerShell helper lazily on first use.
+# Install with `node scripts/install.mjs` (or `dsh plugin --profile <name> add <this-package>`).
+- insert:
+    - id: computer-use
+      name: 'dsh-computer-use'
