@@ -1,5 +1,9 @@
 # dsh-computer-use
 
+[![GitHub release](https://img.shields.io/github/v/release/esch30636/dsh-computer-use?sort=semver)](https://github.com/esch30636/dsh-computer-use/releases)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![dsh-plugin](https://img.shields.io/badge/topic-dsh--plugin-4B5563)](https://github.com/topics/dsh-plugin)
+
 Codex-style **Windows computer use** for DeepSeek Harness: window-targeted UI Automation + occlusion-tolerant screenshots + SendInput mouse/keyboard injection, exposed as five model-facing tools and backed by a bundled long-lived PowerShell helper.
 
 While computer use is active, a click-through **screen overlay** draws a vivid "liquid glass" look: a sapphire *edge vignette* (fully clear center, satin-navy darkening toward the four screen edges) with a thin cyan glass rim hugging the display border, plus a "dynamic island" status pill at the top center — sapphire gradient, diagonal sheen, bright rim, breathing blue glow: `DeepSeek Harness 正在操控你的电脑 | 按 ESC 终止`. Pressing **ESC** stops computer use immediately and closes the overlay; the agent is told to stop and reports back.
@@ -52,7 +56,10 @@ desktop` deliberately refuses to run there. Two supported paths:
    [awesome-dsh-plugin](https://awesome-dsh-plugin.com) (submission pending the
    one-day repository age rule), open **设置 → 插件市场** and install it with one
    click.
-2. **Release installer** (works immediately, no git/pnpm needed):
+2. **Release installer** (works immediately, no git/pnpm needed): download and
+   unzip the archive from
+   [releases](https://github.com/esch30636/dsh-computer-use/releases), then run
+   inside the unzipped folder:
 
    ```powershell
    # downloads the latest release tarball and installs into the desktop profile
